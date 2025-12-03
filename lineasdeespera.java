@@ -42,7 +42,16 @@ public class lineasdeespera {
                     double Mu = TSEscritora.nextDouble();
                     int C = TSEscritora.nextInt();
 
-                    
+                    double rho = Lambda / (C * Mu);
+                    if (rho >= 1) {
+                        System.out.println("Error. El sistema es inestable ( p >= 1).");
+                    }
+                    //Calcular P0.
+                    double suma = 0;
+                    for(int n = 0; n < C; n++){
+                        suma +=Math.pow(Lambda / Mu, n) / factorial (n);
+                    }
+                    double P0 = 1 / (suma + Math.pow(Lambda / Mu, C) / (factorial(C) * (1 - rho)));
                 }
             }
         }while(opcion != 4);
