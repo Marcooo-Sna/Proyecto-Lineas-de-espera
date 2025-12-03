@@ -10,8 +10,14 @@ public class lineasdeespera {
             System.out.println("4. Salir.");
 
             switch (opcion) {
-            }
+                case 1 -> {
+                    // Modelo M/M/1.
+                    System.out.println("Ingrese la tasa de llegada (λ): ");
+                    double Lambda = TSEscritora.nextDouble();
+                    System.out.println("Ingrese la tasa de servicio (μ)");
+                    double Mu = TSEscritora.nextDouble();
 
+                }
             }
         }
 
