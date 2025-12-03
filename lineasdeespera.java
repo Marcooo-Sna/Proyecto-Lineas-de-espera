@@ -36,6 +36,13 @@ public class lineasdeespera {
                 }
                 case 2 -> {
                     // Modelo M/M/C.
+                    System.out.println("Ingrese la tasa de llegada (λ): ");
+                    double Lambda = TSEscritora.nextDouble();
+                    System.out.println("Ingrese la tasa de servicio (μ)");
+                    double Mu = TSEscritora.nextDouble();
+                    int C = TSEscritora.nextInt();
+
+                    
                 }
             }
         }while(opcion != 4);
