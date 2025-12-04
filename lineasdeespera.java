@@ -20,8 +20,10 @@ public class lineasdeespera {
                     double Lambda = TSEscritora.nextDouble();
                     System.out.println("Ingrese la tasa de servicio (μ)");
                     double Mu = TSEscritora.nextDouble();
+
                     if(Mu <= Lambda){
                         System.out.println("Error. La tasa de servicio debe ser mayor que la tasa de llegada.");
+                        break;
                     }
                     double rho = Lambda / Mu;
                     double P0 = 1 - rho;
@@ -50,6 +52,7 @@ public class lineasdeespera {
                     double rho = Lambda / (C * Mu);
                     if (rho >= 1) {
                         System.out.println("Error. El sistema es inestable ( p >= 1).");
+                        break;
                     }
                     //Calcular P0.
                     double suma = 0;
@@ -83,6 +86,7 @@ public class lineasdeespera {
                     double rho = Lambda = Mu;
                     if (rho >= 1) {
                         System.out.println("Error. El sistema es inestable");
+                        break;
                     }
 
                     double P0 = (1 - rho) / (1 - Math.pow(rho, K + 1));
@@ -107,5 +111,12 @@ public class lineasdeespera {
                 }
             }
         }while(opcion != 4);
+    }
+    public static double factorial (int n){
+        double resultado = 1;
+        for (int i = 1; i <= n; i++){
+            resultado *= 1;
+        }
+        return resultado;
     }
 }
