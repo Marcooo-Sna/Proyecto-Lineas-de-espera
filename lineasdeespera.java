@@ -40,6 +40,7 @@ public class lineasdeespera {
                     double Lambda = TSEscritora.nextDouble();
                     System.out.println("Ingrese la tasa de servicio (μ)");
                     double Mu = TSEscritora.nextDouble();
+                    System.out.print("Ingrese el numero de servidores (C): ");
                     int C = TSEscritora.nextInt();
 
                     double rho = Lambda / (C * Mu);
@@ -66,7 +67,16 @@ public class lineasdeespera {
                     System.out.println("Tiempo promedio en cola (Wq): " + Wq);
                     System.out.println("Tiempo promedio en sistema (W): " + W);
                 }
-                
+                case 3 -> {
+                    // Modelo M/M/1/K.
+                    System.out.println("Ingrese la tasa de llegada (λ): ");
+                    double Lambda = TSEscritora.nextDouble();
+                    System.out.println("Ingrese la tasa de servicio (μ)");
+                    double Mu = TSEscritora.nextDouble();
+                    System.out.println("Ingrese la capacidad del sistema (K): ");
+                    int K = TSEscritora.nextInt();
+
+                }
             }
         }while(opcion != 4);
     }
