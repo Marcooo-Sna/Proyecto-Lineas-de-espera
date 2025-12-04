@@ -89,6 +89,11 @@ public class lineasdeespera {
 
                     System.out.println("Resultados para M/M/1/K:");
                     System.out.println("Utilizacion (rho): " + rho);
+                    System.out.println("Probabilidad de sistema vacio (P0): " + P0);
+                    System.out.println("Numero promedio en cola (Lq): " + Lq);
+                    System.out.println("Numero promedio en sistema (L): " + L);
+                    System.out.println("Tiempo promedio en cola (Wq): " + Wq);
+                    System.out.println("Tiempo promedio en sistema (W): " + W);
                 }
             }
         }while(opcion != 4);
