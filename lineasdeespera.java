@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class lineasdeespera {
-    public static void main(String [] args) {
-    } {
+    public static void main(String [] args) {       
         Scanner TSEscritora = new Scanner(System.in);
         int opcion = 0;
         do{
