@@ -1,13 +1,17 @@
 import java.util.Scanner;
 public class lineasdeespera {
-    public static void main(String [] args);{
+    public static void main(String [] args) {
+    } {
         Scanner TSEscritora = new Scanner(System.in);
+        int opcion = 0;
         do{
             System.out.println("Modelo de colas.");
             System.out.println("1. Modelo M/M/1.");
             System.out.println("2. Modelo M/M/C.");
             System.out.println("3. Modelo M/M/1/K.");
             System.out.println("4. Salir.");
+            System.out.println("Seleccione una opcion: ");
+            opcion = TSEscritora.nextInt();
 
             switch (opcion) {
                 case 1 -> {
@@ -94,6 +98,12 @@ public class lineasdeespera {
                     System.out.println("Numero promedio en sistema (L): " + L);
                     System.out.println("Tiempo promedio en cola (Wq): " + Wq);
                     System.out.println("Tiempo promedio en sistema (W): " + W);
+                }
+                case 4 -> {
+                    System.out.println("Saliendo del programa.....");
+                }
+                default -> {
+                    System.out.println("Opcion no valida. (Si sos swiftie, Grammy de Rep).");
                 }
             }
         }while(opcion != 4);
