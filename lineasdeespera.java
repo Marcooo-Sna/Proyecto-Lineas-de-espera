@@ -14,6 +14,7 @@ public class lineasdeespera {
 
             switch (opcion) {
                 case 1 -> {
+
                     // Modelo M/M/1.
                     System.out.println("Ingrese la tasa de llegada (λ): ");
                     double Lambda = TSEscritora.nextDouble();
@@ -40,6 +41,7 @@ public class lineasdeespera {
                     System.out.println("Tiempo promedio en sistema (W): " + W);
                 }
                 case 2 -> {
+
                     // Modelo M/M/C.
                     System.out.println("Ingrese la tasa de llegada (λ): ");
                     double Lambda = TSEscritora.nextDouble();
@@ -53,6 +55,7 @@ public class lineasdeespera {
                         System.out.println("Error. El sistema es inestable ( p >= 1).");
                         break;
                     }
+
                     //Calcular P0.
                     double suma = 0;
                     for(int n = 0; n < C; n++){
@@ -74,6 +77,7 @@ public class lineasdeespera {
                     System.out.println("Tiempo promedio en sistema (W): " + W);
                 }
                 case 3 -> {
+                    
                     // Modelo M/M/1/K.
                     System.out.println("Ingrese la tasa de llegada (λ): ");
                     double Lambda = TSEscritora.nextDouble();
