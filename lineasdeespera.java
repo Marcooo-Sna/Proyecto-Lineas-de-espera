@@ -76,6 +76,13 @@ public class lineasdeespera {
                     System.out.println("Ingrese la capacidad del sistema (K): ");
                     int K = TSEscritora.nextInt();
 
+                    double rho = Lambda = Mu;
+                    if (rho >= 1) {
+                        System.out.println("Error: La utilizacion debe ser menor a 1.");
+                        break;
+                    }
+
+
                 }
             }
         }while(opcion != 4);
