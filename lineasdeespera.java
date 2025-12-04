@@ -78,14 +78,19 @@ public class lineasdeespera {
 
                     double rho = Lambda = Mu;
                     if (rho >= 1) {
-                        System.out.println("Error: La utilizacion debe ser menor a 1.");
-                        break;
+                        System.out.println("Error. El sistema es inestable");
                     }
 
+                    double P0 = (1 - rho) / (1 - Math.pow(rho, K + 1));
+                    double Lq = rho * (1 - (K + 1) * Math.pow(rho, K) + K * Math.pow(rho, K + 1)) / ((1 - rho) * (1 - Math.pow(rho, K + 1)));
+                    double L = Lq + (1 - P0);
+                    double Wq = Lq / (Lambda * (1 - P0));
+                    double W = Wq + 1 / Mu;
 
+                    System.out.println("Resultados para M/M/1/K:");
+                    System.out.println("Utilizacion (rho): " + rho);
                 }
             }
         }while(opcion != 4);
     }
-    
 }
