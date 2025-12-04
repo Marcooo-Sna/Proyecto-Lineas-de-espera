@@ -52,7 +52,21 @@ public class lineasdeespera {
                         suma +=Math.pow(Lambda / Mu, n) / factorial (n);
                     }
                     double P0 = 1 / (suma + Math.pow(Lambda / Mu, C) / (factorial(C) * (1 - rho)));
+
+                    double Lq = P0 * Math.pow (Lambda / Mu, C) * rho / (factorial(C) * Math.pow(1 - rho, 2));
+                    double L = Lq + Lambda / Mu;
+                    double Wq = Lq / Lambda;
+                    double W = Wq + 1 / Mu;
+
+                    System.out.println("Resultados para M/M/C:");
+                    System.out.println("Utilizacion (rho): " + rho);
+                    System.out.println("Probabilidad de sistema vacio (P0): " + P0);
+                    System.out.println("Numero promedio en cola (Lq): " + Lq);
+                    System.out.println("Numero promedio en sistema (L): " + L);
+                    System.out.println("Tiempo promedio en cola (Wq): " + Wq);
+                    System.out.println("Tiempo promedio en sistema (W): " + W);
                 }
+                
             }
         }while(opcion != 4);
     }
